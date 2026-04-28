@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Tailwind + CSS</title>
+</head>
+</head>
+
+<body>
+
+  <div class="items-center">
+    <header class="bg-white shadow">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+
+        <div class="flex items-center gap-4">
+
+          <div class="text-2xl font-bold text-[#9c5a3c]">
+            <img src="./Mask group.png" alt="">
+          </div>
+
+          <label for="menuToggle"
+            class="bg-[#9c5a3c] text-white px-4 py-2 rounded-full cursor-pointer flex items-center gap-2">
+            ☰ Каталог
+          </label>
+
+        </div>
+
+        <nav class="vav">
+          <a href="./index.html">Оптовые продажи</a>
+          <a href="./about.html">Продажи в рознице</a>
+          <a href="./style.html   ">Контакты</a>
+          <a href="./vakansi.html">Вакансии</a>
+          <a href="./baholash.html">Отзывы</a>
+        </nav>
+
+        <a href="./my.html"> <button class="border px-4 py-2 rounded-full flex items-center gap-2">
+            👤 Личный кабинет
+          </button></a>
+
+      </div>
+    </header>
+
+
+    <div class="relative">
+
+      <input type="checkbox" id="menuToggle" class="peer hidden">
+
+      <label for="menuToggle" class="fixed inset-0 bg-black bg-opacity-40 hidden peer-checked:block z-40">
+      </label>
+
+      <aside class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50
+         transform -translate-x-full
+         peer-checked:translate-x-0
+         transition-transform duration-300">
+
+        <div class="p-4 border-b flex justify-between items-center">
+          <h2 class="text-lg font-bold">
+            Katalog</h2>
+          <label for="menuToggle" class="cursor-pointer text-xl">✖</label>
+        </div>
+
+        <ul class="p-4 space-y-3">
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Летнее меню</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Кофе и чай</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Холодные напитки</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Комбо</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Shoko Go</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Конструктор завтраков</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Завтраки весь день</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Блинчики</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Пицца от Eazzy Pizza & Gelato</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Супы</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Горячие блюда</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Сэндвичи</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Только в доставке</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Салаты</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Десерты</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Добавки и соусы</li>
+
+        </ul>
+
+      </aside>
+
+    </div>
+
+  </div>
+
+  <section class="banner">
+    <button class="nav left" onclick="prevSlide()">❮</button>
+
+    <div class="slides">
+
+      <div class="slide active">
+        <div class="text">
+          <span class="badge">🔥 АКЦИЯ</span>
+          <h1>Каждую пятницу<br><b>1+1</b></h1>
+          <p>
+            Сделайте вашу жизнь слаще!
+            Свежие, мягкие и тающие во рту торты✅
+          </p>
+          <button class="btn">Оформить заказ</button>
+        </div>
+        <img src="./deva-williamson-ntfGWVbBiO0-unsplash 1.png">
+        <img src="./deva-williamson-ntfGWVbBiO0-unsplash 2.png" alt="">
+      </div>
+
+      <div class="slide">
+        <div class="text">
+          <span class="badge green">🚚 ДОСТАВКА</span>
+          <h1>🚚 Бесплатная<br><b>доставка по городу</b></h1>
+          <p>
+            Получайте самые вкусные сладости, не выходя из дома✅
+          </p>
+          <button class="btn">Закажите прямо сейчас</button>
+        </div>
+        <img class="rounded-3xl"
+          src="https://thumbs.dreamstime.com/b/free-delivery-man-riding-scooter-man-courier-riding-scooter-parcel-box-fast-delivery-concept-free-delivery-man-riding-162009472.jpg">
+
+        <img class="rounded-3xl"
+          src="data:image/png;base64,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"
+          alt="">
+      </div>
+
+      <div class="slide">
+        <div class="text">
+          <span class="badge pink">🍰 ПРЕМИУМ</span>
+          <h1> Сладости<b>созданные мастерами</b></h1>
+          <p>
+            👉 Каждый торт — произведение искусства, созданное с любовью. ✅
+          </p>
+          <button class="btn">Посмотреть каталог</button>
+
+        </div>
+        <img class="rounded-3xl"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtReNr1EAH6Yfe23lCy0B8-E6oQaP5Xqzzzw&s">
+
+        <img class="rounded-3xl"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT039NL_GD91xx1pqKsc-QmKUTpZUauHNrKSQ&s" alt="">
+
+        <img class="rounded-3xl"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTm4SXp9GtmjgWGIMGpTepdx_n2gAzEaqbhg&s" alt="">
+      </div>
+
+    </div>
+
+    <button class="nav right" onclick="nextSlide()">❯</button>
+  </section>
+
+
+
+  </style>
+  </head>
+
+  <body>
+
+
+    <div class="">
+      <h1 class="text-2xl font-bold mx-24">Каталог</h1>
+      <br>
+      <h2 class="mx-24 text-purple-700 text-center text-3xl">Летнее меню</h2>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-6 py-20">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-amber-100 rounded-xl mb-5 flex items-center justify-center text-5xl">
+            <img src="./Пирожное Воздушное 39 гр.png" alt="">
+          </div>
+
+          <h4 class="text-xl font-bold mb-2 py-3">Пирожное Воздушное</h4>
+          <p class="text-gray-600 mb-4">Мягкий, сладкий — идеален для каждого дня.</p>
+
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">25 000 сум</span>
+
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+        flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+        flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-orange-100 rounded-xl mb-5 flex items-center justify-center text-5xl"><img
+              src="./Пирожное Ёжик 100гр.png" alt=""></div>
+          <h4 class="text-xl font-bold mb-2">Пирожное Ёжик</h4>
+          <p class="text-gray-600 mb-4">Каждый торт — искусство, созданное с любовью.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">180 000 сум</span>
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+             flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+        flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-yellow-100 rounded-xl mb-5 flex items-center justify-center text-5xl"><img
+              src="./Пирожное Марс 75 гр.png" alt=""></div>
+          <h4 class="text-xl font-bold mb-2 py-3">Пирожное Марс</h4>
+          <p class="text-gray-600 mb-4">Идеальный выбор для горячего чая</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">15 000 сум</span>
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+             flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+             flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-amber-100 rounded-xl mb-5 flex items-center justify-center text-5xl "><img
+              src="./Пирожное_медовое_классическое_80_гр.png" alt=""></div>
+          <h4 class="text-xl font-bold mb-2 py-3">Пирожное медовое </h4>
+          <p class="text-gray-600 mb-4">Мягкий, сладкий — идеален для каждого дня.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">40 000 сум</span>
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+             flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+             flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-orange-100 rounded-xl mb-5 flex items-center justify-center text-5xl"><img
+              src="./Пирожное-Манго-маракуйя-90-гр.png" alt=""></div>
+          <h4 class="text-xl font-bold mb-2">Пирожное Манго</h4>
+          <p class="text-gray-600 mb-4">Каждый торт — искусство, созданное с любовью.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">110 000 сум</span>
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+             flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+             flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-yellow-100 rounded-xl mb-5 flex items-center justify-center text-5xl"><img
+              src="./Слойка-с-курагой-80-гр.png" alt=""></div>
+          <h4 class="text-xl font-bold mb-2 py-3">Пирожное Слойка-с-курагой</h4>
+          <p class="text-gray-600 mb-4">Идеальный выбор для горячего чая.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">30 000 сум</span>
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+             flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+             flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-amber-100 rounded-xl mb-5 flex items-center justify-center text-5xl "><img
+              src="./Пирожное_Медовое_со_взбитыми_сливками_100_гр.png" alt=""></div>
+          <h4 class="text-xl font-bold mb-2 py-3">Пирожное_Медовое</h4>
+          <p class="text-gray-600 mb-4">Мягкий, сладкий — идеален для каждого дня.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">40 000 сум</span>
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+             flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+             flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-orange-100 rounded-xl mb-5 flex items-center justify-center text-5xl"><img
+              src="./Торт-Сочная-дыня-800-гр.png" alt=""></div>
+          <h4 class="text-xl font-bold mb-2">Торт-Сочная</h4>
+          <p class="text-gray-600 mb-4">Каждый торт — искусство, созданное с любовью.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">80 000 сум</span>
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+             flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+             flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-yellow-100 rounded-xl mb-5 flex items-center justify-center text-5xl"><img
+              src="./Рулет-Вишнёвый-500гр.png" alt=""></div>
+          <h4 class="text-xl font-bold mb-2 py-3">Рулет Вишнёвый</h4>
+          <p class="text-gray-600 mb-4">Идеальный выбор для горячего чая.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">45 000 сум</span>
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+             flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+             flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-amber-100 rounded-xl mb-5 flex items-center justify-center text-5xl "><img
+              src="./Поленце.png" alt=""></div>
+          <h4 class="text-xl font-bold mb-2 py-3">Пирожное Поленце</h4>
+          <p class="text-gray-600 mb-4">Мягкий, сладкий — идеален для каждого дня.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">70 000 сум</span>
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+             flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+             flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-orange-100 rounded-xl mb-5 flex items-center justify-center text-5xl"><img
+              src="./Пирожное Марс 75 гр.png" alt=""></div>
+          <h4 class="text-xl font-bold mb-2">Пирожное Марс</h4>
+          <p class="text-gray-600 mb-4">Каждый торт — искусство, созданное с любовью.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">110 000 сум</span>
+
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+             flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+             flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-yellow-100 rounded-xl mb-5 flex items-center justify-center text-5xl"><img
+              src="./deva-williamson-ntfGWVbBiO0-unsplash 1 (1).png" alt=""></div>
+          <h4 class="text-xl font-bold mb-2 py-3">Пирожное deva-williamson</h4>
+          <p class="text-gray-600 mb-4">Идеальный выбор для горячего чая.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">700 000 сум</span>
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+             flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+             flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-amber-100 rounded-xl mb-5 flex items-center justify-center text-5xl "><img
+              src="./Пирожное_медовое_классическое_80_гр.png" alt=""></div>
+          <h4 class="text-xl font-bold mb-2 py-3">Пирожное медовое </h4>
+          <p class="text-gray-600 mb-4">Мягкий, сладкий — идеален для каждого дня.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">40 000 сум</span>
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+             flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+             flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-orange-100 rounded-xl mb-5 flex items-center justify-center text-5xl"><img
+              src="./Пирожное-Манго-маракуйя-90-гр.png" alt=""></div>
+          <h4 class="text-xl font-bold mb-2">Пирожное Манго</h4>
+          <p class="text-gray-600 mb-4">Каждый торт — искусство, созданное с любовью.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">110 000 сум</span>
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+             flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+             flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+          <div class="h-40 bg-yellow-100 rounded-xl mb-5 flex items-center justify-center text-5xl"><img
+              src="./Слойка-с-курагой-80-гр.png" alt=""></div>
+          <h4 class="text-xl font-bold mb-2 py-3">Пирожное Слойка-с-курагой</h4>
+          <p class="text-gray-600 mb-4">Идеальный выбор для горячего чая.</p>
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-caramel">30 000 сум</span>
+            <div class="relative w-[180px] h-[48px]">
+              <button id="addBtn" class="absolute inset-0 bg-purple-400 text-white rounded-xl
+             flex items-center justify-center hover:bg-purple-600">
+                В корзину
+              </button>
+
+              <div id="counter" class="absolute inset-0 hidden bg-gray-100 rounded-xl
+             flex items-center justify-between px-4">
+                <button id="minusBtn">−</button>
+                <span id="count">1</span>
+                <button id="plusBtn">+</button>
+              </div>
+            </div>
+          </div>
+
+          <br>
+          <br>
+        </div>
+      </div>
+    </main>
+
+
+    <footer class="bg-[#FFF5ED] py-16 my-5">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="bg-[#FFEBDD] rounded-2xl p-10 flex flex-col lg:flex-row justify-between gap-10">
+
+          <div class="max-w-xl">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Оптовые продажи
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Вы всегда можете приобрести нашу продукцию в следующих магазинах:
+            </p>
+            <button class="bg-[#9C5A3C] text-white px-6 py-3 rounded-full hover:opacity-90 transition">
+              Связаться с менеджером
+            </button>
+          </div>
+
+          <div class="grid grid-cols-2 gap-6 items-center">
+            <div class="bg-white p-4 rounded-xl flex justify-center">
+              <img src="./Frame 30.png" alt="Лента" class="h-8">
+            </div>
+            <div class="bg-white p-4 rounded-xl flex justify-center">
+              <img src="./Pasted-20230806-130801 1.png" alt="Самокат" class="h-8">
+            </div>
+            <div class="bg-white p-4 rounded-xl flex justify-center">
+              <img src="./Pasted-20230806-130831 1.png" alt="Магнит" class="h-8">
+            </div>
+            <div class="bg-white p-4 rounded-xl flex justify-center">
+              <img src="./Pasted-20230806-130509 1.png" alt="Скидкино" class="h-8">
+            </div>
+            <div class="bg-white p-4 rounded-xl flex justify-center col-span-2">
+              <img src="./Pasted-20230806-130941 1.png" alt="Караван" class="h-8">
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 max-w-4xl">
+          <h3 class="text-2xl font-bold mb-4">Условия оптовых продаж</h3>
+          <p class="text-gray-500">В слабопеременных полях (при флуктуациях на уровне единиц процентов) лазер
+            экстремально синхронизует эксимер. Мишень по определению пространственно притягивает квантовый пульсар. Если
+            для простоты пренебречь потерями на теплопроводность, то видно, что химическое соединение синхронно.
+            Исследователями из разных лабораторий неоднократно наблюдалось, как колебание последовательно стабилизирует
+            поток по мере распространения сигнала в среде с инверсной населенностью.
+            <br>
+            <br>
+
+            Неустойчивость, как известно, быстро разивается, если плазма неустойчиво притягивает вихревой гамма-квант.
+            Силовое поле, по данным астрономических наблюдений, вращает погранслой. Если предварительно подвергнуть
+            объекты длительному вакуумированию, взвесь мономолекулярно представляет собой фонон, хотя этот факт
+            нуждается в дальнейшей тщательной экспериментальной проверке. Расслоение поглощает фонон. Течение среды
+            усиливает осциллятор.
+
+            <br>
+            <br>
+
+            Волна едва ли квантуема. В самом общем случае струя бифокально стабилизирует фотон. Излучение, на первый
+            взгляд, переворачивает адронный гидродинамический удар, генерируя периодические импульсы синхротронного
+            излучения.
+          </p>
+        </div>
+
+        <div class="mt-16 bg-white rounded-2xl p-8 shadow-sm">
+          <h4 class="text-xl font-bold mb-6">
+            Форма связи с админом
+          </h4>
+
+          <form class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <input type="text" placeholder="Ваше имя"
+              class="border rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300">
+            <input type="text" placeholder="Ваше фамилия"
+              class="border rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300">
+            <input type="number" placeholder="Ваше телефон номер"
+              class="border rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-300">
+            <button
+              class="border border-[#9C5A3C] text-[#9C5A3C] rounded-full px-6 py-3 hover:bg-[#9C5A3C] hover:text-white transition">
+              Отправить
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <footer class="bg-cocoa text-white bg-gray-600 mt-24">
+        <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="text-xl font-bold mb-4"><img src="./Mask group.png" alt=""></h4>
+            <p class="text-sm text-gray-300">Eng mazali va sifatli pishiriqlar manzili.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Menyu</h4>
+            <ul class="space-y-2 text-gray-300">
+              <li>Bosh sahifa</li>
+              <li>Katalog</li>
+              <li>Aksiya</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Aloqa</h4>
+            <p class="text-gray-300">📞 +998 90 000 00 00</p>
+            <p class="text-gray-300">📍 Toshkent</p>
+          </div>
+        </div>
+        <div class="text-center text-sm text-gray-400 pb-6">© 2025 Sweet Master. Barcha huquqlar himoyalangan.</div>
+      </footer>
+
+
+      <script src="script.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+          const productCards = document.querySelectorAll('.bg-white.rounded-2xl');
+
+          productCards.forEach(card => {
+            const addBtn = card.querySelector('#addBtn');
+            const counter = card.querySelector('#counter');
+            const minusBtn = card.querySelector('#minusBtn');
+            const plusBtn = card.querySelector('#plusBtn');
+            const countSpan = card.querySelector('#count');
+
+            let count = 1;
+            addBtn.addEventListener('click', function () {
+              addBtn.classList.add('hidden');
+              counter.classList.remove('hidden');
+            });
+
+            plusBtn.addEventListener('click', function () {
+              count++;
+              countSpan.textContent = count;
+            });
+
+            minusBtn.addEventListener('click', function () {
+              if (count > 1) {
+                count--;
+                countSpan.textContent = count;
+              } else {
+                count = 1;
+                countSpan.textContent = count;
+                counter.classList.add('hidden');
+                addBtn.classList.remove('hidden');
+              }
+            });
+          });
+
+        });
+      </script>
+
+  </body>
+
+</html>

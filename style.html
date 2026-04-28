@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="items-center">
+        <header class="bg-white shadow">
+            <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+
+                <div class="flex items-center gap-4">
+
+                    <div class="text-2xl font-bold text-[#9c5a3c]">
+                        <img src="./Mask group.png" alt="">
+                    </div>
+
+                    <label for="menuToggle"
+                        class="bg-[#9c5a3c] text-white px-4 py-2 rounded-full cursor-pointer flex items-center gap-2">
+                        ☰ Каталог
+                    </label>
+
+                </div>
+
+                <nav class="vav">
+                    <a href="./index.html">Оптовые продажи</a>
+                    <a href="./about.html">Продажи в рознице</a>
+                    <a href="./style.html   ">Контакты</a>
+                    <a href="./vakansi.html">Вакансии</a>
+                    <a href="./baholash.html">Отзывы</a>
+                </nav>
+
+                <a href="./my.html"> <button class="border px-4 py-2 rounded-full flex items-center gap-2">
+                        👤 Личный кабинет
+                    </button></a>
+
+            </div>
+        </header>
+
+
+        <div class="relative">
+
+            <input type="checkbox" id="menuToggle" class="peer hidden">
+
+            <label for="menuToggle" class="fixed inset-0 bg-black bg-opacity-40 hidden peer-checked:block z-40">
+            </label>
+
+            <aside class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50
+         transform -translate-x-full
+         peer-checked:translate-x-0
+         transition-transform duration-300">
+
+                <div class="p-4 border-b flex justify-between items-center">
+                    <h2 class="text-lg font-bold">
+                        Katalog</h2>
+                    <label for="menuToggle" class="cursor-pointer text-xl">✖</label>
+                </div>
+
+                <ul class="p-4 space-y-3">
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Летнее меню</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Кофе и чай</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Холодные напитки</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Комбо</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Shoko Go</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Конструктор завтраков</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Завтраки весь день</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Блинчики</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Пицца от Eazzy Pizza & Gelato</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Супы</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Горячие блюда</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Сэндвичи</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Только в доставке</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Салаты</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Десерты</li>
+                    <li class="hover:text-[#9c5a3c] cursor-pointer">Добавки и соусы</li>
+
+                </ul>
+
+            </aside>
+
+        </div>
+    </div>
+
+
+    <main class="max-w-7xl mx-auto px-4 py-10">
+
+  <!-- TITLE -->
+  <h1 class="text-4xl font-bold text-center text-pink-600 mb-6">
+    🍰 Bizning Shirinliklar Do‘konlarimiz
+  </h1>
+
+  <p class="text-center text-xl mb-12">
+    Uyda yolg‘iz yashaydigan otaxon va onaxonlar uchun ham qulay ❤️
+  </p>
+
+  <!-- FILIALLAR -->
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+
+    <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+      <div class="p-6">
+        <h2 class="text-2xl font-bold text-pink-600 mb-3">
+          Sweet Life – Chilonzor
+        </h2>
+        <p class="text-xl mb-2">📍 Chilonzor, 12-mavze</p>
+        <p class="text-xl mb-2">⏰ Har kuni: 09:00 – 22:00</p>
+        <p class="text-xl mb-4">
+          ☎️ Telefon:
+          <a href="tel:+998901234567" class="text-pink-600 font-bold">
+            +998 90 123 45 67
+          </a>
+        </p>
+      </div>
+      <iframe class="w-full h-64 border-0"
+        src="https://www.google.com/maps?q=Chilonzor%2012-mavze&output=embed"
+        loading="lazy"></iframe>
+    </div>
+
+    <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+      <div class="p-6">
+        <h2 class="text-2xl font-bold text-pink-600 mb-3">
+          Sweet Life – Yunusobod
+        </h2>
+        <p class="text-xl mb-2">📍 Yunusobod, Amir Temur ko‘chasi</p>
+        <p class="text-xl mb-2">⏰ Har kuni: 10:00 – 23:00</p>
+        <p class="text-xl mb-4">
+          ☎️ Telefon:
+          <a href="tel:+998931112233" class="text-pink-600 font-bold">
+            +998 99 876 54 32
+          </a>
+        </p>
+      </div>
+      <iframe class="w-full h-64 border-0"
+        src="https://www.google.com/maps?q=Yunusobod%20Amir%20Temur&output=embed"
+        loading="lazy"></iframe>
+    </div>
+
+  </section>
+
+  <section class="bg-white rounded-3xl shadow-xl p-10">
+
+    <h2 class="text-3xl font-bold text-center text-pink-600 mb-8">
+      🧓 Qanday Zakaz Beriladi?
+    </h2>
+
+    <div class="space-y-8 text-2xl">
+
+      <div class="flex items-start gap-4">
+        <span class="text-4xl">1️⃣</span>
+        <p>
+          Yuqorida yozilgan <strong>telefon raqamlaridan biriga qo‘ng‘iroq qiling</strong>.
+        </p>
+      </div>
+
+      <div class="flex items-start gap-4">
+        <span class="text-4xl">2️⃣</span>
+        <p>
+          Telefonni ko‘targan odamga sekin va aniq ayting:<br>
+          <strong>“Menga shirinlik kerak”</strong>.
+        </p>
+      </div>
+
+      <div class="flex items-start gap-4">
+        <span class="text-4xl">3️⃣</span>
+        <p>
+          Qaysi shirinlikni xohlayotganingizni ayting  
+          (masalan: tort, pirojniy yoki pechenye).
+        </p>
+      </div>
+
+      <div class="flex items-start gap-4">
+        <span class="text-4xl">4️⃣</span>
+        <p>
+          Uy manzilingizni ayting. Agar yurish qiyin bo‘lsa —  
+          <strong>uyga yetkazib beramiz</strong>.
+        </p>
+      </div>
+
+      <div class="flex items-start gap-4">
+        <span class="text-4xl">5️⃣</span>
+        <p>
+          Shirinliklar sizga <strong>issiq va mazali</strong> holda olib kelinadi 🍰
+        </p>
+      </div>
+
+    </div>
+
+    <div class="mt-10 text-center">
+      <p class="text-2xl font-bold text-pink-600">
+        Biz sizni o‘ylaymiz ❤️
+      </p>
+      <p class="text-xl mt-2">
+        Savol bo‘lsa — bemalol qo‘ng‘iroq qiling
+      </p>
+    </div>
+
+  </section>
+
+</main>
+
+  <script src="./script.js"></script>
+
+    </body>
+</html>

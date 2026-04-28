@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Авторизация</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+
+    <div class="items-center">
+        <header class="bg-white shadow">
+            <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+
+                <div class="flex items-center gap-4">
+
+                    <div class="text-2xl font-bold text-[#9c5a3c]">
+                        <img src="./Mask group.png" alt="">
+                    </div>
+
+                    <label for="menuToggle"
+                        class="bg-[#9c5a3c] text-white px-4 py-2 rounded-full cursor-pointer flex items-center gap-2">
+                        ☰ Каталог
+                    </label>
+
+                </div>
+
+                <nav class="vav">
+                    <a href="./index.html">Оптовые продажи</a>
+                    <a href="./about.html">Продажи в рознице</a>
+                    <a href="./style.html">Контакты</a>
+                    <a href="./vakansi.html">Вакансии</a>
+                    <a href="./baholash.html">Отзывы</a>
+                </nav>
+
+                 <a href="./my.html"> <button class="border px-4 py-2 rounded-full flex items-center gap-2">
+          👤 Личный кабинет
+        </button></a>
+
+            </div>
+        </header>
+            
+        </div>
+
+            <div class="items-center">
+
+
+
+                <div class="relative">
+
+                    <input type="checkbox" id="menuToggle" class="peer hidden">
+
+                    <label for="menuToggle" class="fixed inset-0 bg-black bg-opacity-40 hidden peer-checked:block z-40">
+                    </label>
+
+                    <aside class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50
+                         transform -translate-x-full
+                         peer-checked:translate-x-0
+                        transition-transform duration-300">
+
+                    <div class="p-4 border-b flex justify-between items-center">
+                            <h2 class="text-lg font-bold">
+                                Katalog</h2>
+                            <label for="menuToggle" class="cursor-pointer text-xl">✖</label>
+                    </div>
+
+                    <ul class="p-4 space-y-3">
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Летнее меню</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Кофе и чай</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Холодные напитки</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Комбо</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Shoko Go</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Конструктор завтраков</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Завтраки весь день</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Блинчики</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Пицца от Eazzy Pizza & Gelato</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Супы</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Горячие блюда</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Сэндвичи</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Только в доставке</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Салаты</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Десерты</li>
+                            <li class="hover:text-[#9c5a3c] cursor-pointer">Добавки и соусы</li>
+
+                    </ul>
+
+                </aside>
+
+            </div>
+        </div>
+
+  <main class="flex-grow flex items-center justify-center">
+    <div class="bg-white w-[380px] rounded-2xl shadow-lg p-8 text-center">
+
+      <h1 class="text-2xl font-semibold mb-2">Авторизация</h1>
+      <p class="text-gray-500 text-sm mb-6">
+        Войдите удобным для вас способом
+      </p>
+
+      <button onclick="social('VK')"
+        class="w-full bg-[#4C75A3] text-white py-3 rounded-full mb-3 font-medium">
+        Продолжить с VK
+      </button>
+
+      <button onclick="social('Google')"
+        class="w-full bg-[#F25C54] text-white py-3 rounded-full mb-4 font-medium">
+        Продолжить с Google
+      </button>
+
+      <div class="flex items-center my-4">
+        <div class="flex-grow h-px bg-gray-200"></div>
+        <span class="px-3 text-gray-400 text-sm">или</span>
+        <div class="flex-grow h-px bg-gray-200"></div>
+      </div>
+
+      <button onclick="showEmail()"
+        class="w-full border py-2 rounded-full mb-2 flex justify-center items-center gap-2">
+        📧 Продолжить с почтой
+      </button>
+
+      <button onclick="showPhone()"
+        class="w-full border py-2 rounded-full flex justify-center items-center gap-2">
+        📞 По номеру телефона
+      </button>
+
+      <form id="emailForm" class="hidden mt-4 text-left">
+        <input type="email" placeholder="Email"
+          class="w-full border rounded-lg px-4 py-2 mb-3" required />
+        <input type="password" placeholder="Пароль"
+          class="w-full border rounded-lg px-4 py-2 mb-3" required />
+        <button
+          class="w-full bg-black text-white py-2 rounded-lg">
+          Войти
+        </button>
+      </form>
+
+      <form id="phoneForm" class="hidden mt-4 text-left">
+        <input type="tel" placeholder="+998 90 123 45 67"
+          class="w-full border rounded-lg px-4 py-2 mb-3" required />
+        <button
+          class="w-full bg-black text-white py-2 rounded-lg">
+          Получить код
+        </button>
+      </form>
+
+      <p class="text-xs text-gray-400 mt-6">
+        Нажимая «Продолжить», вы соглашаетесь
+        с политикой конфиденциальности
+      </p>
+    </div>
+  </main>
+
+  <footer class="bg-black text-gray-400 text-sm py-4">
+    <div class="max-w-6xl mx-auto flex justify-between px-4">
+      <span>© Кондитерская «Качество», 2020–2025</span>
+      <span>+7 (843) 729-500</span>
+    </div>
+  </footer>
+
+  <script>
+    const emailForm = document.getElementById('emailForm');
+    const phoneForm = document.getElementById('phoneForm');
+
+    function showEmail() {
+      emailForm.classList.remove('hidden');
+      phoneForm.classList.add('hidden');
+    }
+
+    function showPhone() {
+      phoneForm.classList.remove('hidden');
+      emailForm.classList.add('hidden');
+    }
+
+    function social(type) {
+      alert(type + ' orqali kirish (demo)');
+    }
+  </script>
+
+</body>
+</html>

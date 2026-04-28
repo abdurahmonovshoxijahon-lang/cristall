@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Вакансии</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+
+  <div class="items-center">
+    <header class="bg-white shadow">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+
+        <div class="flex items-center gap-4">
+
+          <div class="text-2xl font-bold text-[#9c5a3c]">
+            <img src="./Mask group.png" alt="">
+          </div>
+
+          <label for="menuToggle"
+            class="bg-[#9c5a3c] text-white px-4 py-2 rounded-full cursor-pointer flex items-center gap-2">
+            ☰ Каталог
+          </label>
+
+        </div>
+
+        <nav class="vav">
+          <a href="./index.html">Оптовые продажи</a>
+          <a href="./about.html">Продажи в рознице</a>
+          <a href="./style.html">Контакты</a>
+          <a href="./vakansi.html">Вакансии</a>
+          <a href="./baholash.html">Отзывы</a>
+        </nav>
+
+        <a href="./my.html"> <button class="border px-4 py-2 rounded-full flex items-center gap-2">
+            👤 Личный кабинет
+          </button></a>
+
+      </div>
+    </header>
+
+
+    <div class="relative">
+
+      <input type="checkbox" id="menuToggle" class="peer hidden">
+
+      <label for="menuToggle" class="fixed inset-0 bg-black bg-opacity-40 hidden peer-checked:block z-40">
+      </label>
+
+      <aside class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50
+         transform -translate-x-full
+         peer-checked:translate-x-0
+         transition-transform duration-300">
+
+        <div class="p-4 border-b flex justify-between items-center">
+          <h2 class="text-lg font-bold">
+            Katalog</h2>
+          <label for="menuToggle" class="cursor-pointer text-xl">✖</label>
+        </div>
+
+        <ul class="p-4 space-y-3">
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Летнее меню</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Кофе и чай</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Холодные напитки</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Комбо</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Shoko Go</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Конструктор завтраков</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Завтраки весь день</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Блинчики</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Пицца от Eazzy Pizza & Gelato</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Супы</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Горячие блюда</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Сэндвичи</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Только в доставке</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Салаты</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Десерты</li>
+          <li class="hover:text-[#9c5a3c] cursor-pointer">Добавки и соусы</li>
+
+        </ul>
+
+      </aside>
+
+    </div>
+
+  </div>
+
+  <main class="flex-grow flex items-center justify-center">
+    <div class="bg-white w-[400px] rounded-2xl shadow-lg p-8">
+
+      <h1 class="text-2xl font-semibold text-center mb-2">
+        Ishga qabul qilamiz
+      </h1>
+
+      <p class="text-gray-500 text-sm text-center mb-6">
+        Qaysi lavozimga murojaat qilmoqchisiz – tanlang va telefon raqamingizni qoldiring
+      </p>
+
+      <div class="space-y-3 mb-6">
+        <label class="flex items-center gap-3 border rounded-full px-4 py-2 cursor-pointer hover:bg-gray-50">
+          <input type="radio" name="job" value="Tozalovchi" class="accent-black" required>
+          🧹 Tozalovchi
+        </label>
+
+        <label class="flex items-center gap-3 border rounded-full px-4 py-2 cursor-pointer hover:bg-gray-50">
+          <input type="radio" name="job" value="Yetkazib beruvchi" class="accent-black">
+          🚚 Yetkazib beruvchi
+        </label>
+
+        <label class="flex items-center gap-3 border rounded-full px-4 py-2 cursor-pointer hover:bg-gray-50">
+          <input type="radio" name="job" value="Konditer" class="accent-black">
+          🍰 Konditer
+        </label>
+
+        <label class="flex items-center gap-3 border rounded-full px-4 py-2 cursor-pointer hover:bg-gray-50">
+          <input type="radio" name="job" value="Omborchi" class="accent-black">
+          📦 Omborchi
+        </label>
+      </div>
+
+      <form id="vacancyForm">
+        <input type="tel" required placeholder="+998 90 123 45 67"
+          class="w-full border rounded-full px-4 py-3 mb-4 focus:outline-none focus:ring-2 focus:ring-black" />
+
+        <button type="submit" class="w-full bg-black text-white py-3 rounded-full hover:opacity-90">
+          Ariza qoldirish
+        </button>
+      </form>
+
+      <p class="text-xs text-gray-400 text-center mt-4">
+        Ma’lumotlaringiz faqat ishga qabul uchun ishlatiladi
+      </p>
+    </div>
+  </main>
+
+  <footer class="bg-black text-gray-400 text-sm py-4">
+    <div class="max-w-6xl mx-auto flex justify-between px-4">
+      <span>© Кондитерская «Качество», 2020–2025</span>
+      <span>+7 (843) 729-500</span>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('vacancyForm');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const job = document.querySelector('input[name="job"]:checked').value;
+      alert(job + ' lavozimi uchun arizangiz qabul qilindi. Tez orada bog‘lanamiz 😊');
+
+      form.reset();
+    });
+  </script>
+
+</body>
+
+</html>
